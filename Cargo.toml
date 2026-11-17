@@ -1,0 +1,26 @@
+[workspace]
+resolver = "3"
+members = ["crates/store-core", "crates/store-restore"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.7"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/folder-host/format"
+
+[workspace.dependencies]
+anyhow = "1"
+argon2 = "0.5"
+blake3 = "1.8"
+chacha20poly1305 = "0.10"
+clap = { version = "4", features = ["derive", "env"] }
+curve25519-dalek = "4"
+ed25519-dalek = { version = "2", features = ["serde"] }
+fastcdc = "5"
+getrandom = "0.2"
+postcard = { version = "1", features = ["use-std"] }
+rand = "0.9"
+reed-solomon-simd = "3"
+serde = { version = "1", features = ["derive"] }
+tempfile = "3"
+thiserror = "2"

@@ -1,0 +1,19 @@
+[package]
+name = "store-restore"
+description = "Restore folder.host files from raw blobs, offline (fh-restore)"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "fh-restore"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+clap.workspace = true
+ed25519-dalek.workspace = true
+store-core = { path = "../store-core" }
+
+[dev-dependencies]
+tempfile.workspace = true
